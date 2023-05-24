@@ -138,7 +138,7 @@ params:
   #   hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/MGMCN/Blog/content"
+    URL: "https://github.com/MGMCN/Blog/tree/main/content"
     Text: "Edit" # edit text
     appendFilePath: true # to append file path to Edit link
 
