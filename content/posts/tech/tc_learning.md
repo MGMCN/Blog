@@ -37,7 +37,7 @@ node3 Ubuntu 20.04.5 LTS 163.221.29.208
 ## 实验目的
 我们希望在node1和node2之间制造50ms延迟，在node2和node3之间制造100ms延迟，在node1和node3之间制造150ms延迟。
 ## 实验手段
-利用tc指令建立流队列，接管各个节点网卡的流，利用filter规则过滤流，最终制造延迟。  
+利用tc指令建立流队列接管各个节点网卡的流，并利用filter规则过滤流，然后制造延迟。  
 在node1上执行以下指令(注意:请替换ens160为你虚拟机的网卡)
 ```bash
 $ sudo tc qdisc add dev ens160 root handle 1: prio
@@ -128,4 +128,4 @@ PING 163.221.29.106 (163.221.29.106) 56(84) bytes of data.
 rtt min/avg/max/mdev = 100.443/100.563/100.661/0.097 ms
 ```
 ## 讨论
-tc是一个神奇的linux指令，还有很多高级功能有待挖掘，对于正在研究SDN或者涉及网络通信的应用之类课题的人帮助极大。关于tc指令的更多细节请参考[link](https://man7.org/linux/man-pages/man8/tc.8.html)。(ps:其实这也是我为了测试blog post水的first post😂)
+tc是一个神奇的linux指令，还有很多高级功能有待挖掘，对于正在研究SDN之类课题的人帮助极大。关于tc指令的更多细节请参考[link](https://man7.org/linux/man-pages/man8/tc.8.html)。(ps:其实这也是我为了测试blog post水的first post😂)
