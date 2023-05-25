@@ -51,7 +51,7 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   description: "MGMCN's blog"
   keywords: [MGMCN, Blog]
-  author: Me
+  author: MGMCN
   # images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light

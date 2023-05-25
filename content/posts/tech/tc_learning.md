@@ -5,7 +5,7 @@ draft: false
 categories: ["tech"]
 tags: ["network", "tc", "linux"]
 summary: 使用tc命令模拟网络延迟
-author: "Me"
+author: "MGMCN"
 showToc: false
 TocOpen: false
 hidemeta: false
