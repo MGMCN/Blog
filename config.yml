@@ -20,10 +20,14 @@ menu:
           name: Search
           url: /search/
           weight: 5
+        - identifier: posts
+          name: Posts
+          url: /posts/
+          weight: 6
         - identifier: archive
           name: Archive
           url: /archives/
-          weight: 6
+          weight: 7
         - identifier: categories
           name: Categories
           url: /categories/
