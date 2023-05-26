@@ -1,4 +1,4 @@
-baseURL: "https://mgmcn-blog.netlify.app/"
+baseURL: "https://mgmcn-blog.vercel.app/"
 title: MGMCN's blog
 paginate: 5
 theme: PaperMod
