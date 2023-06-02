@@ -88,41 +88,52 @@ params:
 
   label:
     text: "MGMCN's blog"
-    # icon: /apple-touch-icon.png
+    # icon: /img/
     # iconHeight: 35
 
   # profile-mode
-  # profileMode:
-  #   enabled: false # needs to be explicitly set
-  #   title: ExampleSite
-  #   subtitle: "This is subtitle"
-  #   imageUrl: "<img location>"
-  #   imageWidth: 120
-  #   imageHeight: 120
-  #   imageTitle: my image
-  #   buttons:
-  #     - name: Posts
-  #       url: posts
-  #     - name: Tags
-  #       url: tags
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Hi peeper 🤪
+    subtitle: > 
+            > **Welcome to MGMCN's blog**
+             
+            > 本来是不想搭建博客的...因为觉得麻烦...同时我本人也不太喜欢写文章分享
+             
+            > 但最终还是决定搭建一个...看了看花哨的主题...最终选了个简约主题
+             
+            > 我会在本博客上不定期记录下自己学习的新技术
+             
+            > 主要会分享一些在日🇯🇵IT的实习经历
+             
+            > 本博客不提供互动
+             
+            > 联系请邮我
+    imageUrl: img/saber_.png
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my-saber-image
+    buttons:
+      - name: Posts
+        url: posts
 
   # home-info mode
-  homeInfoParams:
-    Title: "Hi peeper 🤪"
-    Content: > 
-        Welcome to MGMCN's blog
+  # homeInfoParams:
+  #   Title: "Hi peeper 🤪"
+  #   Content: > 
+  #       Welcome to MGMCN's blog
         
-        - 本来是不想搭建博客的...因为觉得麻烦...同时我本人也不太喜欢写文章分享
+  #       - 本来是不想搭建博客的...因为觉得麻烦...同时我本人也不太喜欢写文章分享
 
-        - 但最终还是决定搭建一个...看了看花哨的主题...最终选了个简约主题
+  #       - 但最终还是决定搭建一个...看了看花哨的主题...最终选了个简约主题
 
-        - 我会在本博客上不定期记录下自己学习的新技术
+  #       - 我会在本博客上不定期记录下自己学习的新技术
 
-        - 主要会分享一些在日🇯🇵IT的实习经历
+  #       - 主要会分享一些在日🇯🇵IT的实习经历
 
-        - 本博客不提供互动
+  #       - 本博客不提供互动
 
-        - 联系请邮我
+  #       - 联系请邮我
 
   socialIcons:
     - name: github
