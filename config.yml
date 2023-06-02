@@ -109,7 +109,7 @@ params:
             > 本博客不提供互动
              
             > 联系请邮我
-    imageUrl: img/saber_.png
+    imageUrl: /img/saber_.png
     imageWidth: 120
     imageHeight: 120
     imageTitle: my-saber-image
