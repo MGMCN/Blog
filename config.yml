@@ -1,4 +1,4 @@
-baseURL: "https://mgmcn-blog.vercel.app/"
+baseURL: "https://www.mgmcn.net/"
 title: MGMCN's blog
 paginate: 5
 theme: PaperMod
