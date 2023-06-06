@@ -1,4 +1,4 @@
-baseURL: "https://www.mgmcn.net/"
+baseURL: "https://blog.mgmcn.net/"
 title: MGMCN's blog
 paginate: 5
 theme: PaperMod
