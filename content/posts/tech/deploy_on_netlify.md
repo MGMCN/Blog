@@ -9,7 +9,7 @@ author: "MGMCN"
 showToc: true
 TocOpen: false
 hidemeta: false
-comments: false
+comments: true
 disableShare: false
 disableHLJS: false
 hideSummary: false
