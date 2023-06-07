@@ -71,7 +71,7 @@ params:
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
-  comments: false
+  comments: true
   hidemeta: false
   hideSummary: false
   showtoc: false
@@ -106,9 +106,7 @@ params:
              
             > 主要会分享一些在日🇯🇵IT的实习经历
              
-            > 本博客不提供互动
-             
-            > 联系请邮我
+            > 联系请邮件我
     imageUrl: /img/saber_.png
     imageWidth: 120
     imageHeight: 120
