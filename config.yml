@@ -105,10 +105,10 @@ params:
             > 我会在本博客上不定期记录下自己学习的新技术
              
             > 主要会分享一些在日🇯🇵IT的实习经历
-    imageUrl: /img/saber_.png
+    imageUrl: /img/shiro.png
     imageWidth: 120
     imageHeight: 120
-    imageTitle: my-saber-image
+    imageTitle: my-shiro-image
     buttons:
       - name: Posts
         url: posts
