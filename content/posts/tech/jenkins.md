@@ -28,7 +28,7 @@ UseHugoToc: true
 #     hidden: true # only hide on current single page
 ---
 
-> 有很多方法可以帮助你部署一个按时执行的爬虫代码，本文记录了如何使用Jenkins部署的大体流程，Jenkins会在我们规定的时间拉取我们存放在Github仓库的代码并编译运行，然后将爬取的结果以pull request的方式更新到我们的Github仓库去。
+> 有很多方法可以帮助你部署一个定时执行的爬虫代码，本文记录了如何使用Jenkins部署的大体流程，Jenkins会在我们规定的时间拉取我们存放在Github仓库的代码并编译运行，然后将爬取的结果以pull request的方式更新到我们的Github仓库去。
 
 ## 安装Jenkins
 请参照[官方教程](https://www.jenkins.io/doc/book/installing/)安装Jenkins。
