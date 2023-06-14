@@ -57,5 +57,5 @@ UseHugoToc: true
 ![image](/img/jenkins-6.png)
 点击保存。
 ## 结语
-现在你就全都配置好啦！只要你的Jenkins服务不宕掉，你的代码会在每个月1号执行，并且自动将爬取的结果PR到你的仓库去。请参照[hugoThemesRanking](https://github.com/MGMCN/hugoThemesRanking)。
+现在你就全都配置好啦！只要你的Jenkins服务不宕掉，你的代码会在每月的1号执行，并且自动将爬取的结果PR到你的仓库去。请参照[hugoThemesRanking](https://github.com/MGMCN/hugoThemesRanking)。
 
