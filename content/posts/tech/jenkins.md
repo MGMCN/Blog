@@ -56,6 +56,14 @@ UseHugoToc: true
 这里我们选择通过执行shell脚本来自动化我们的爬虫代码构建和运行，同时添加构建失败后通知的邮件地址。
 ![image](/img/jenkins-6.png)
 点击保存。
+### 可选配置
+当你完成上面的配置，你已经可以在Jenkins尝试构建你的项目失败后收到通知邮件了，但是如果你想在你的项目构建成功的时候也收到通知邮件的话需要配置以下⬇️信息。
+#### 可选系统配置
+根据你自己需求配置Extended E-mail Notification
+![image](/img/jenkins-7.png)
+#### 可选工程配置
+根据你自己需求配置Editable Email Notification
+![image](/img/jenkins-8.png)
 ## 结语
 现在你就全都配置好啦！只要你的Jenkins服务不宕掉，你的代码会在每月的第一天执行，并且自动将爬取的结果PR到你的仓库去。请参照[hugoThemesRanking](https://github.com/MGMCN/hugoThemesRanking)。
 
