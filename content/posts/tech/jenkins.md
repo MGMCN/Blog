@@ -49,7 +49,7 @@ UseHugoToc: true
 ### 工程配置
 配置你的Github仓库地址，我这里使用的是access_token这种访问方式，你也可以使用其他Github提供的访问方式。
 ![image](/img/jenkins-3.jpeg)
-在构建触发器这里我们选择定时构建。这样我们的爬虫代码会定时在每个月的1号执行。
+在构建触发器这里我们选择定时构建。这样我们的爬虫代码会定时在每个月的第一天执行。
 ![image](/img/jenkins-4.png)
 勾选下图中的配置，你也可以按照自己需求勾选。
 ![image](/img/jenkins-5.png)
@@ -57,5 +57,5 @@ UseHugoToc: true
 ![image](/img/jenkins-6.png)
 点击保存。
 ## 结语
-现在你就全都配置好啦！只要你的Jenkins服务不宕掉，你的代码会在每月的1号执行，并且自动将爬取的结果PR到你的仓库去。请参照[hugoThemesRanking](https://github.com/MGMCN/hugoThemesRanking)。
+现在你就全都配置好啦！只要你的Jenkins服务不宕掉，你的代码会在每月的第一天执行，并且自动将爬取的结果PR到你的仓库去。请参照[hugoThemesRanking](https://github.com/MGMCN/hugoThemesRanking)。
 
