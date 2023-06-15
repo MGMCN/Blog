@@ -36,7 +36,7 @@ UseHugoToc: true
 - 评论插件使用的是[utterances](https://github.com/utterance/utterances)
 - 部署使用了[Vercel](https://vercel.com/)
 
-### 实现的功能
+### 配置的功能
 - Home主页
 - dark/light mode切换
 - 搜索post
