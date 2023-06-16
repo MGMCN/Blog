@@ -102,11 +102,9 @@ params:
     subtitle: > 
             > **Welcome to MGMCN's blog**
              
-            > 本来是不想搭建博客的...因为觉得麻烦...同时我本人也不太喜欢写文章分享
+            > I'll share some of the technologies I've
              
-            > 但最终还是决定搭建一个...看了看花哨的主题...最终选了个简约主题
-             
-            > 我会在本博客不定期记录曾经学习的技术和现在学习的新技术
+            > used before and the new ones I'm learning.
     imageUrl: /img/shiro.png
     imageWidth: 120
     imageHeight: 120

@@ -28,8 +28,10 @@ UseHugoToc: true
 #     hidden: true # only hide on current single page
 ---
 
-> 耗时一个多月，个人blog的各个功能也都完善的差不多了。 
-
+> 耗时一个多月，博客的各个功能也都完善的差不多了。  
+> 本来是不想搭建博客的...因为觉得麻烦...同时我本人也不太喜欢写文章分享。              
+> 但最终还是决定搭建一个...看了看花哨的主题...最终选了个简约主题。
+             
 ### 搭建Blog使用的技术
 - 框架选择了[Hugo](https://github.com/gohugoio/hugo)
 - Blog主题选择了[hugo-PaperMod](https://github.com/adityatelange/hugo-PaperMod)
