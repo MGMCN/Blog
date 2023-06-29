@@ -33,7 +33,7 @@ Build p2pnode from [source code](https://github.com/MGMCN/P2P-File-Sharing).
 ```bash
 $ go get -t github.com/libp2p/go-libp2p@v0.28.0   
 $ go mod tidy
-$ go build -o p2pnode
+$ go build -o p2pnode ./main
 ```
 Enter ```-help``` option to view usage.
 ```bash
