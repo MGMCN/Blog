@@ -2,8 +2,8 @@
 title: "如何活用V2ray抵御合法的中间人攻击🤪"
 date: 2025-10-31T10:25:48+09:00
 draft: false
-categories: []
-tags: []
+categories: [tech]
+tags: ["network"]
 summary: 本文教你怎么轻松绕过公司网络安全策略中的中间人攻击
 author: "MGMCN"
 showToc: false
@@ -94,6 +94,7 @@ $ brew install v2ray
 $ vim ~/abc/xyz/config.json # 内容见下，注意替换为你自己的配置
 $ v2ray run -c  ~/abc/xyz/config.json
 ```
+你想添加其他被block的网站只需要在rules下的domain里追加即可。
 ```json
 {
   "log": {
