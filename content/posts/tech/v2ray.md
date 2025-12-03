@@ -165,8 +165,8 @@ $ v2ray run -c  ~/abc/xyz/config.json
           "domain:oaiusercontent.com",
           "domain:auth0.openai.com",
           "domain:challenges.cloudflare.com",
-	      "domain:mail.google.com",
-	      "domain:linkedin.com"
+          "domain:mail.google.com",
+          "domain:linkedin.com"
         ],
         "outboundTag": "home-proxy"
       },
