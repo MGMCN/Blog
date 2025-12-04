@@ -6,7 +6,7 @@ categories: [tech]
 tags: ["deploy","network"]
 summary: 本文讲述我在家使用树莓派和Mac mini部署了什么有意思的服务，以及我是如何架构的
 author: "MGMCN"
-showToc: false
+showToc: true
 TocOpen: false
 hidemeta: false
 comments: true
