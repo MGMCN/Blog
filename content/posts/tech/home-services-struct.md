@@ -41,18 +41,57 @@ UseHugoToc: true
 
 一个具体的案例是当我的xray-home-vpn服务down了后，Uptime kuma通过curl发现该服务unhealthy，遂通过邮件告知我xray-home-vpn service may down。这个时候我可以通过Grafana面板查询xray-home-vpn相关的系统日志从而诊断根本原因。（这一系列的操作都未涉及ssh到服务器的指令操作。）当我诊断出root cause后我可以决定是否通过3x-ui-panel重启该服务，或者进行其他后续的操作，例如修改配置等等。（此处可能涉及ssh到服务器后的指令操作）
 
-```mermaid
-flowchart TD
-    A[Uptime Kuma] -->|定期健康检查 curl| B[xray-home-vpn 服务]
-    B -->|检测到 Unhealthy| C[发送告警邮件]
-    C --> D[用户收到通知]
-    D --> E[打开 Grafana Dashboard]
-    E -->|查询 Loki 日志 和 InfluxDB 指标| F[诊断问题根因]
-    F -->|决定操作| G{是否需要重启服务}
-    G -->|是| H[通过 3x-ui-panel 重启服务]
-    G -->|否| I[修改配置 或 优化系统]
-    H --> J[服务恢复正常]
-    I --> J
+```
+                           +-----------------------------+
+                           |         Uptime Kuma         |
+                           |      (health checking)      |
+                           +-------------+---------------+
+                                         |
+                                         | periodic curl
+                                         v
+                           +-----------------------------+
+                           |    xray-home-vpn service    |
+                           +-------------+---------------+
+                                         |
+                                         | if Unhealthy
+                                         v
+                           +-----------------------------+
+                           |       Send alert email      |
+                           +-------------+---------------+
+                                         |
+                                         v
+                           +-----------------------------+
+                           |       User gets notice      |
+                           +-------------+---------------+
+                                         |
+                                         v
+                           +-----------------------------+
+                           |   Open Grafana dashboard    |
+                           +-------------+---------------+
+                                         |
+                                         | Query Loki logs
+                                         | and InfluxDB metrics
+                                         v
+                           +-----------------------------+
+                           |     Diagnose root cause     |
+                           +-------------+---------------+
+                                         |
+                                         v
+                           +-----------------------------+
+                           |  Need to restart service?   |
+                           +-------------+---------------+
+                                    /           \
+                                  yes           no
+                                   v             v
+        +-----------------------------+     +-----------------------------+
+        |   Restart via 3x-ui panel   |     |  Change config / tune sys.  |
+        +-------------+---------------+     +-------------+---------------+
+                            \__________________________/
+                                          |
+                                          v
+                           +-----------------------------+
+                           |      Service back to OK     |
+                           +-----------------------------+
 ```
 
 ---
@@ -62,17 +101,29 @@ flowchart TD
 
 当我启用grafana的Access Protection的时候，一个具体案例是当我在公网试图访问Grafana dashboard的时候我会先访问Cloudflare提供的认证页面例如通过我的邮箱接收验证码，如果访问者并未被加入白名单，那么即便访问者输入了自己的邮箱也无法接收到验证码。当我接收到Cloudflare发送的验证码完成验证后，我会被redirect到grafana的login入口，这是第二道防线也就是我之前提到的常规登陆验证。
 
-```mermaid
-sequenceDiagram
-    participant User as 访问者
-    participant CF as Cloudflare Access
-    participant GF as Grafana Server
-
-    User->>CF: 请求访问 Grafana Dashboard
-    CF->>User: 显示认证页面 (邮箱验证码)
-    User->>CF: 输入邮箱并完成验证 ✅
-    CF->>GF: 放行请求，转发到真实服务
-    GF->>User: 返回 Grafana Login 页面 (第二道登录验证)
+```
++-----------+               +--------------------+               +-------------------+
+| Visitor   |               | Cloudflare Access  |               | Grafana Server    |
++-----------+               +--------------------+               +-------------------+
+     |                                 |                                   |
+     | 1) open Grafana URL             |                                   |
+     |-------------------------------->|                                   |
+     |                                 |                                   |
+     |          2) show login page (email code)                            |
+     |<--------------------------------|                                   |
+     |                                 |                                   |
+     | 3) submit email + code          |                                   |
+     |-------------------------------->|                                   |
+     |                                 |                                   |
+     |                                 | 4) verify & allow request         |
+     |                                 |---------------------------------->|
+     |                                 |                                   |
+     |                                 |        5) forward to Grafana      |
+     |                                 |---------------------------------->|
+     |                                 |                                   |
+     | 6) return Grafana login page (second auth)                          |
+     |<--------------------------------------------------------------------|
+     |                                 |                                   |
 ```
 
 ---
